@@ -1,0 +1,17 @@
+version: '2'
+services:
+  jekyll:
+    build: .
+    container_name: jekyll
+    volumes:
+      - "/var/jekyll:/var/jekyll"
+    environment:
+      VIRTUAL_HOST: jekyll.local
+    extra_hosts:
+      - jekyll.local:127.0.0.1
+    restart: always
+networks:
+  default:
+    external:
+      name: rpi-nginx-proxy_default
+
