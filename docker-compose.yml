@@ -6,9 +6,9 @@ services:
     volumes:
       - "/var/jekyll:/var/jekyll"
     environment:
-      VIRTUAL_HOST: jekyll.local
+      VIRTUAL_HOST: jekyll.home
     extra_hosts:
-      - jekyll.local:127.0.0.1
+      - jekyll.home:127.0.0.1
     restart: always
 networks:
   default:
